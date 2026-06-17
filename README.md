@@ -20,6 +20,8 @@ pip install -e .
 
 ## Usage
 
+### Python
+
 ```python
 from is_admin_user import is_admin_user
 
@@ -36,6 +38,22 @@ from is_admin_user import is_admin
 
 if is_admin():
     print("Administrative privileges are available")
+```
+
+### Command line
+
+```bash
+is-admin-user
+```
+
+The command prints `true` and exits with status code `0` when the current
+process has administrator/root privileges. It prints `false` and exits with
+status code `1` otherwise.
+
+For scripts that only need the exit code:
+
+```bash
+is-admin-user --quiet
 ```
 
 ## Platform behavior
